@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            color: #fff;
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height:100vh;
+            background-image: url("./image.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: 80%;
+            height: 500px;
+            margin: 15px;
+            padding: 10px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.290);
+            background-image: url("image.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            /* z-index: 1; */
+            animation: xx 1s 1s linear infinite;
+        }
+        @keyframes xx{
+            from{
+                box-shadow: 0px 0px 90px 15px rgb(0, 60, 255);
+            }
+            to{
+                box-shadow: 0px 0px 100px 20px rgb(255, 0, 0);
+            }
+        }
+        .container .right{
+            width: 60%;
+            text-transform: uppercase;
+        }
+        .container .left{
+            width: 40%;
+            gap: 15px;
+            text-align: center;
+            height: 100%;
+        }
+        .container .left form{ 
+            background-color: rgba(255, 255, 255, 0.235);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            z-index: 1;
+        }
+        .container .left form input{
+            width: 100%;
+            height: 35px;
+            border-radius: 15px;
+            border: none;
+            margin: 3px;
+            padding: 10px;
+        }
+        .container .left form button{
+            background-color: transparent;
+            margin: 5px ;
+            border: 2px solid snow;
+            outline: none;
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+            transition: 0.5s;
+        }
+        .container .left form button:hover{
+            box-shadow: 0px 0px 5px 5px white;
+        }
+        #nones-inputs{
+            display: none;
+        }
+        #stu{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="right">
+            <h1>Lorem ipsum dolor sit.</h1>
+            <p>
+                Lorem ipsum dolor sit amet 
+                consectetur adipisicing elit. 
+                Error, ipsum.
+            </p>
+        </div>
+        <div class="left">
+            <form action="xx">
+                <div class="inputs">
+                    <label for="name">name</label>
+                    <br>
+                    <input placeholder="name" type="text">
+                    <br>
+                    <label  for="email">email</label>
+                    <br>
+                    <input placeholder="email" type="email">
+                    <br>
+                    <!-- == -->
+                    <div id="nones-inputs" class="nones-inputs">      
+                    <br>
+                    <label  for="exp">exp yers</label>
+                    <br>
+                    <input placeholder="exp yers" type="number">
+                    <br>
+                    <br>
+                    <label  for="track">track</label>
+                    <br>
+                    <input placeholder="track" type="text">
+                    <br>
+                    </div>
+                    <!-- == -->
+
+                    <label for="pasword">pasword</label>
+                    <br>
+                    <input placeholder="password" type="password">
+                    <br>
+                    <label for="name">conferm pasword</label>
+                    <br>
+                    <input placeholder="conferm apassword" type="password">
+                    <br>
+                    <button type="reset">log in </button>
+                    <br>
+                    <span id="tet" onclick="iam_tet()">iam a tetcher</span>
+                    <br>
+                    <span id="stu" onclick="iam_stu()">iam a student</span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function iam_tet(){
+            document.getElementById("nones-inputs").style.display = "block";
+            document.getElementById("tet").style.display = "none";
+            document.getElementById("stu").style.display = "block";
+        }
+        function iam_stu() {
+            document.getElementById("nones-inputs").style.display = "none";
+            document.getElementById("tet").style.display = "block";
+            document.getElementById("stu").style.display = "none";
+        }
+    </script>
+</body>
+</html>
